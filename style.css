@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px auto ;
+    background-color: rgba(238, 238, 238, 0.5);
+    max-width: 600px;
+}
+
+.checkbox-wrapper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+ 
+}
+.checkbox:hover {
+    background-color: #6e3ee70c;
+}
+
+
+.checkbox {
+    width: 24px;
+    height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #D4D4D4;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+
+.checkmark {
+    background-color: #6E41E2;
+    border-radius: 4px;
+    display: none;
+    position: relative;
+    z-index: 0;
+    width: 24px;
+    height: 24px;
+    left: -1px;
+    top: -1px;
+}
+
+.checkmark__svg {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.default-checkbox {
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    opacity: 0;
+    z-index: 1
+}
+
+.default-checkbox:checked+.checkmark {
+    display: block;
+}
+
+.default-checkbox:checked:hover+.checkmark {
+    background-color: #5835B0 ;
+}
+
+.checkbox__label {
+
+    margin-left: 10px;
+}
+
+.radio-wrapper {
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.button-seperator {
+    display: flex;
+    margin: 20px;
+}
+
+.radio__label {
+    margin: auto;
+    margin-left: 10px;
+}
+
+
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #E3DAF9;
+}
+
+.radio:hover {
+    background-color: #6f41e291;
+}
+.default-radio {
+    
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+    margin: 3px;
+    position: absolute;
+    z-index: 1;
+}
+
+.radio__middle {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border: #6E41E2 solid 7px;
+    position: relative;
+    z-index: 0;
+    display: none;
+}
+
+.default-radio:checked + .radio__middle  {
+    display: block;
+}
+
+.default-radio:checked:hover + .radio__middle {
+    border-color: #5835B0;
+    width: 28px;
+}
+
